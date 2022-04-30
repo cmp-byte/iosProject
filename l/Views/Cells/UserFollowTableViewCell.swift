@@ -11,8 +11,9 @@ protocol UserFollowTableViewCellDelegate: AnyObject {
     func didTapFollowUnfollowButton(model: UserRelationship)
 }
 
-enum FollowState {
-    case following, not_following
+enum FollowState { //indicates if the curr user follows the other user or not
+    case following
+    case not_following
 }
 
 struct UserRelationship {
