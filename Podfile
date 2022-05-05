@@ -17,6 +17,8 @@ pod 'Firebase/Crashlytics'
 pod 'Firebase/Storage'
 
 
-#sqllitepod 'SQLite.swift', '~> 0.13.3'
+#sqllitepod 'SQLite.swift'
+
+pod 'RealmSwift'
 
 end
