@@ -57,12 +57,15 @@ public class AuthManager{
                 }
                 
                 completion(true)
+                
             }
         }
         else if let username = username {//username log in
-            print(username)
+            print("Please login via email")
+            completion(false)
             
         }
+       // completion(false)
     }
     //attempt to log out user via firebase
     public func logOut (completion: (Bool) -> Void){

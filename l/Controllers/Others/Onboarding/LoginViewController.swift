@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     private let usernameEmailField: UITextField={
         let field = UITextField()
-        field.placeholder = "Username or Email"
+        field.placeholder = "Email :"
         field.returnKeyType = .next
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x:0,y:0,width:10,height:0))
@@ -216,7 +216,7 @@ class LoginViewController: UIViewController {
                }
                 else{
                     //error
-                    let alert = UIAlertController(title: "Log in error", message:"Unable to log in", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Log in error", message:"Unable to log in. Keep in mind to login via email and password", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Dismiss",style: .cancel, handler: nil))
                     self.present(alert,animated: true)
                 }
