@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RegistrationViewController: UIViewController {
     
     struct Constants{
         static let cornerRadius: CGFloat = 8.0
     }
+    
+    let realm = try! Realm()
     
     private let usernameField: UITextField={
         let field = UITextField()
@@ -73,6 +76,8 @@ class RegistrationViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         return button
     }()
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
@@ -99,12 +104,22 @@ class RegistrationViewController: UIViewController {
         emailField.resignFirstResponder()
         usernameField.resignFirstResponder()
         passwordField.resignFirstResponder()
-        
+
         guard let email = emailField.text, !email.isEmpty,
               let password = passwordField.text,!password.isEmpty, password.count >= 8,
               let username = usernameField.text, !username.isEmpty else{
                 return
         }
+        // inserting a profile type in the realm file
+        let bmiProfile = BmiProfile.create(withName: "", height: "", weight: "", email: email)
+        let accProfile = AccProfile.create(withName: username, email: email)
+        print("Write to Realm")
+        try! realm.write {
+            realm.add(bmiProfile)
+            realm.add(accProfile)
+        }
+        print("User Realm User file location: \(realm.configuration.fileURL!.path)")
+        
         AuthManager.shared.registerNewUser(username: username, email: email, password: password) {registered in
             DispatchQueue.main.async{
             if registered{

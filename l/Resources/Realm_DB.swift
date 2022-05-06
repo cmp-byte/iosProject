@@ -7,21 +7,21 @@
 
 import RealmSwift
 
-class Profile: Object {
+class BmiProfile: Object {
     @objc dynamic var email = ""
-    @objc dynamic var name = ""
-    @objc dynamic var username = ""
-    @objc dynamic var bio = ""
+    @objc dynamic var age = ""
+    @objc dynamic var height = ""
+    @objc dynamic var weight = ""
     
     override static func primaryKey() -> String? {
       return "email"
     }
     
-    static func create(withName name: String, username: String, bio: String, email: String) -> Profile {
-        let profile = Profile()
-        profile.name = name
-        profile.username = name
-        profile.bio = name
+    static func create(withName age: String, height: String, weight: String, email: String) -> BmiProfile {
+        let profile = BmiProfile()
+        profile.age = age
+        profile.height = height
+        profile.weight = weight
         profile.email = email
         
         return profile
@@ -29,4 +29,19 @@ class Profile: Object {
 }
 
 
-
+class AccProfile: Object {
+    @objc dynamic var email = ""
+    @objc dynamic var username = ""
+    
+    override static func primaryKey() -> String? {
+      return "email"
+    }
+    
+    static func create(withName username: String,  email: String) -> AccProfile {
+        let profile = AccProfile()
+        profile.email = email
+        profile.username = username
+        
+        return profile
+    }
+}

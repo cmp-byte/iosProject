@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     private var feedRenderModels = [HomeFeedRenderViewModel]()
     
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(FeedPostTableViewCell.self, forCellReuseIdentifier: FeedPostTableViewCell.identifier)

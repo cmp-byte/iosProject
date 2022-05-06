@@ -80,4 +80,8 @@ public class AuthManager{
             return
         }
     }
+    
+    public func getEmail() -> String{
+        return (Auth.auth().currentUser?.email)!
+    }
 }

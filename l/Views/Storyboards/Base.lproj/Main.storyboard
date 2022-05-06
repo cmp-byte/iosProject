@@ -132,7 +132,7 @@
         <scene sceneID="zz5-SK-74G">
             <objects>
                 <navigationController id="mUp-AI-lLN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" id="plK-mh-gYf"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="scalemass" catalog="system" id="plK-mh-gYf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="azs-zO-Rvi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -200,9 +200,9 @@
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="scalemass" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
