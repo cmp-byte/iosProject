@@ -48,7 +48,7 @@ final class NotificationsViewController: UIViewController, UITableViewDelegate, 
         navigationItem.title = "Notifications"
         view.backgroundColor = .systemBackground
         view.addSubview(spinner)
-        //spinner.startAnimating()
+        spinner.startAnimating()
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
